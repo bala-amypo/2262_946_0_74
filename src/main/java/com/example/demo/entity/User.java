@@ -1,5 +1,7 @@
 package com.example.demo.entity;
 
+import jakarta.persistance.entity;
+@Entity
 public class User{
 
     @Id
@@ -17,29 +19,36 @@ public class User{
     }
 
 
-    public int getId(){
-        return this.id;
+    public String getName(){
+        return this.name;
     }
 
-    public void setId(int id){
+    public void setName(String name){
+        this.name = name;
+    }
+
+
+    public int getEmail(){
+        return this.email;
+    }
+
+    public void setEmail(String email){
+        this.email = email;
+    }
+
+
+    public float getGpa(){
+        return this.gpa;
+    }
+
+    public void setGpa(float gpa){
+        this.gpa = gpa;
+    }
+
+    public User(int id, String name, String email, float gpa){
         this.id = id;
-    }
-
-
-    public int getId(){
-        return this.id;
-    }
-
-    public void setId(int id){
-        this.id = id;
-    }
-
-    
-    public int getId(){
-        return this.id;
-    }
-
-    public void setId(int id){
-        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.gpa = gpa;
     }
 }
