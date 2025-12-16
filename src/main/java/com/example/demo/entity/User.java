@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
-import jakarta.persistance.entity;
+import jakarta.persistence.entity;
+
 @Entity
 public class User{
 
@@ -28,7 +29,7 @@ public class User{
     }
 
 
-    public int getEmail(){
+    public String getEmail(){
         return this.email;
     }
 
