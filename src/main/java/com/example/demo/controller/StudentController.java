@@ -19,7 +19,6 @@ public class StudentController {
 
     @PostMapping("/student/add")
     public Student createData(@RequestBody Student obj)
-    
     {
         return service.addStudent(obj);
     }
@@ -27,5 +26,11 @@ public class StudentController {
     @GetMapping("/student/fetch")
     public List<Student> getData() {
         return service.getAllStudents();
+    }
+
+    @GetMapping("/student/fetch/{id}")
+    public Optional<Student> getDatabyID(@PathVariable int id)
+    {
+
     }
 }
