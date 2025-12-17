@@ -30,7 +30,7 @@ public class StudentServiceImplementation implements StudentService {
     }
 
     @Override
-    public Optional<Student> updateStudent(Student obj, int id){
-        return repo.save(obj, id);
+    public Optional<Student> updateStudent(int id, Student obj){
+        return repo.save(id, obj);
     }
 }
