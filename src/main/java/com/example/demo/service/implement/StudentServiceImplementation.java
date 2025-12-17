@@ -16,7 +16,6 @@ public class StudentServiceImplementation implements StudentService {
 
     @Override
     public Student addStudent(Student obj){
-        studentDB.put(obj.getId(), obj);
         return repo.save(obj);
     }
 
