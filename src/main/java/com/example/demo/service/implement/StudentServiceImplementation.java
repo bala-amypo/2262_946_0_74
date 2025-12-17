@@ -28,9 +28,4 @@ public class StudentServiceImplementation implements StudentService {
     public Optional<Student> getStudent(int id){
         return repo.findById(id);
     }
-
-    @Override
-    public Optional<Student> updateStudent(int id, Student obj){
-        return repo.save(id, obj);
-    }
 }
