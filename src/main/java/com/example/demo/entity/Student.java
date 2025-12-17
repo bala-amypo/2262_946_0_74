@@ -46,7 +46,7 @@ public class Student{
         this.gpa = gpa;
     }
 
-    public User(int id, String name, String email, float gpa){
+    public Student(int id, String name, String email, float gpa){
         this.id = id;
         this.name = name;
         this.email = email;
