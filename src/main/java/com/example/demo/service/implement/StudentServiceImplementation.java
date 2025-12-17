@@ -23,4 +23,9 @@ public class StudentServiceImplementation implements StudentService {
     public List<Student> getAllStudents(){
         return repo.findAll();
     }
+
+    @Override
+    public Optional<Student> getStudent(int id){
+        return repo.findById(id);
+    }
 }
