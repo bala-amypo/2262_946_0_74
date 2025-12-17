@@ -34,4 +34,9 @@ public class StudentController {
     {
         return service.getStudent(id);
     }
+
+    @PutMapping("/student/update")
+    public Optional<Student> updateData(@RequestBody Student obj){
+        return service
+    }
 }
