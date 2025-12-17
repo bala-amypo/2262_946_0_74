@@ -32,7 +32,9 @@ public class StudentController {
     }
 
     @PutMapping("/student/update/{id}")
-    public Optional<Student> updateDataById(@PathVariable int id, @RequestBody Student obj){
-        return service.addStudent(obj);
+    public String updateDataById(@PathVariable int id, @RequestBody Student obj){
+        obj.setId(id);
+        service.addStudent(obj);
+        return "Updated successfully.";
     }
 }
