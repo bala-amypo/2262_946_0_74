@@ -52,4 +52,6 @@ public class Student{
         this.email = email;
         this.gpa = gpa;
     }
+
+    public Student(){}
 }
