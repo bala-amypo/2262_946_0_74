@@ -20,7 +20,7 @@ public class StudentController {
     @PostMapping("/student/add")
     public Student createData(@RequestBody Student obj)
     
-    [{
+    {
         return service.addStudent(obj);
     }
 
