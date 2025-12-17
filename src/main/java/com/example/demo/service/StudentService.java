@@ -7,4 +7,5 @@ public interface StudentService{
     public Student addStudent(Student obj);
     public List<Student> getAllStudents();
     public Optional<Student> getStudent(int id);
+    public Optional<Student> updateDatabyId(S);
 }
