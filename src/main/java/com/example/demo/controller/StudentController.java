@@ -8,6 +8,7 @@ import java.util.*;
 import com.example.demo.service.StudentService;
 import com.example.demo.entity.Student;
 
+@CrossOrigin(origins = "*")
 @RestController
 public class StudentController {
 
@@ -41,7 +42,7 @@ public class StudentController {
     @DeleteMapping("/student/delete/{id}")
         public String deleteData(@PathVariable int id) {
             Optional<Student> student = service.getStudent(id);
-            if(student==null)
+            if(student.isEmpty())
                 return "Student Not Found";
             
             service.deleteStudent(id);
