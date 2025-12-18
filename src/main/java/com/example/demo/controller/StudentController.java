@@ -40,7 +40,7 @@ public class StudentController {
 
     @DeleteMapping("/student/delete/{id}")
         public String deleteData(@PathVariable int id) {
-            Optional<Student> student = service.getStudentById(id);
+            Optional<Student> student = service.getStudent(id);
             if(student==null)
                 return "Student Not Found";
             
