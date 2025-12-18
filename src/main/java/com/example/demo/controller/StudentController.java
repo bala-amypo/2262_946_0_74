@@ -8,7 +8,6 @@ import java.util.*;
 import com.example.demo.service.StudentService;
 import com.example.demo.entity.Student;
 
-@CrossOrigin(origins = "*")
 @RestController
 public class StudentController {
 
