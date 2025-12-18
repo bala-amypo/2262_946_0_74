@@ -28,4 +28,9 @@ public class StudentServiceImplementation implements StudentService {
     public Optional<Student> getStudent(int id){
         return repo.findById(id);
     }
+
+    @Override
+    public void deleteStudent(int id){
+        repo.deleteById(id);
+}
 }

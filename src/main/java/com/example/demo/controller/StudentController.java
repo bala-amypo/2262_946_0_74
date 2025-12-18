@@ -37,4 +37,14 @@ public class StudentController {
         service.addStudent(obj);
         return "Updated successfully.";
     }
+
+    @DeleteMapping("/student/delete/{id}")
+        public String deleteData(@PathVariable int id) {
+            Optional<Student> student = service.getStudentById(id);
+            if(student==null)
+                return "Student Not Found";
+            
+            service.deleteStudent(id);
+            return "Deleted Successfully";
+    }
 }
